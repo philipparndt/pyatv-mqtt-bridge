@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  atvmqtt:
+    build: .
+    restart: "no"
+    network_mode: host
+    volumes:
+        - ./config:/var/lib/atv:ro
+    #command: tail -F /dev/null
+    
